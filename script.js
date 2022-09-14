@@ -7,9 +7,18 @@ const modalBackground = document.getElementById("modal-background");
 
 // variables
 let userText = "";
-let errorCount = 0;
+// let errorCount = 0;
 let startTime;
 let questionText = "";
+let n=0;
+
+function increment(){
+
+  n++;
+  console.log(n);
+  return n;
+  
+}
 
 // Load and display question
 fetch("./texts.json")
@@ -22,6 +31,7 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
+  
 
   // Handle backspace press
   if (newLetter == "Backspace") {
@@ -46,6 +56,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    increment();
   }
 
   // check if given question text is equal to user typed text
@@ -63,11 +74,14 @@ const validate = (key) => {
 
 // FINISHED TYPING
 const gameOver = () => {
+  const errorCount=increment();
+  console.log(errorCount);
+
   document.removeEventListener("keydown", typeController);
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -89,7 +103,7 @@ const gameOver = () => {
 
   // restart everything
   startTime = null;
-  errorCount = 0;
+  // errorCount = 0;
   userText = "";
   display.classList.add("inactive");
 };
@@ -114,7 +128,7 @@ const start = () => {
      
       clearInterval(startCountdown);
      
-      console.log("count");
+
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       display.classList.remove("inactive");
