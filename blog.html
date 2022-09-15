@@ -16,107 +16,107 @@
         <h1>Question And Answer</h1>
         <div class="answer">
             <h1>1.Difference between Local Storage, Session Storage</h1>
-            <p>
+            <p class="paragraph">
                 Local storage is the most recent mechanism. It allows for larger amounts of data to be stored, but the data is not deleted when the browser is closed. Local storage is useful for storing data that the user will need to access later, such as offline data.
             </p>
-            <p>
+            <p class="paragraph">
                 Session storage is similar to cookies, but the data is only stored for the current session. This means that the data will be deleted when the user closes the browser. Session storage is useful for storing data that is sensitive, such as login credentials.
             </p>
             <h3>Local Storage</h3>
-            <p>
+            <p class="paragraph">
                 Most web applications these days require some type of user input, whether it be for a username, shipping address, or even just a preferences setting. This input is then usually sent off to a server somewhere to be processed and stored. However, what if your application needs to store data locally on the user’s computer? This is where Local Storage comes in.
             </p>
-            <p>
+            <p class="paragraph">
                 Local Storage is a type of web storage that allows JavaScript to store and access data right in the browser. This is especially useful for storing data that you want to persist even if the user closes the browser, such as preferences or settings.
             </p>
-            <p>
+            <p class="paragraph">
                 The data in Local Storage is stored in key/value pairs. The key is like the name of the data, and the value is like the actual data itself. You can think of it as a variable in JavaScript. To store data in Local Storage, you first need to create a key. Then you can store any data you want under that key.
             </p>
             <h3>Session Storage</h3>
-            <p>
+            <p class="paragraph">
                 Session Storage is a type of web storage that allows web applications to store data locally within the user's browser. Unlike cookies, data stored in session storage is specific to the site on which it was created and data is not shared with other sites
             </p>
-            <p>
+            <p class="paragraph">
                 Session Storage is a new feature introduced in HTML5 that allows you to store data locally in the user's browser. Unlike cookies, data stored in session storage is specific to the site on which it was created and data is not shared with other sites.
             </p>
-            <p>
-                Session Storage is a way of storing data on the client side of an application. It's similar to local storage, but with a few key differences 
+            <p class="paragraph">
+                Session Storage is a way of storing data on the client side of an application. It's similar to local storage, but with a few key differences  </p>
                 <ul>
                     <li>Session Storage data is only available to the site that created it.</li>
                     <li>Session Storage data is not shared with other sites.</li>
                     <li>Session Storage data is not persistent, meaning it is only available for the duration of the user's session on a site.</li>
                     <li>Session Storage data is specific to the browser tab in which it was created.</li>
                 </ul>
-            </p>
-            <p>
+           
+            <p class="paragraph">
                 Session Storage is a great way to improve the performance of your web applications by reducing the amount of data that needs to be transferred between the client and server. It can also be used to store data in a more secure way since the data is not stored in cookies where it can be accessed by third-party sites.
             </p>
 
         </div>
         <div class="answer">
             <h1>2.JavaScript Global Scope and Block Scope</h1>
-            <p>In programming, the scope is defined as the accessibility of the variable. Or in more technical terms, it is the reference to the context of the code. So, how can we differentiate between the scope of the variables, and on what factors does this “scope” depend?</p>
+            <p class="paragraph">In programming, the scope is defined as the accessibility of the variable. Or in more technical terms, it is the reference to the context of the code. So, how can we differentiate between the scope of the variables, and on what factors does this “scope” depend?</p>
             <h3>Variable Scope in JavaScript</h3>
-            <p>In JavaScript, there are 3 types of variable scope, namely:
+            <p class="paragraph">In JavaScript, there are 3 types of variable scope, namely:</p>
                 <ul>
                     <li>Global Scope</li>
                     <li>Function Scope</li>
                     <li>Block Scope</li>
                 </ul>
-            </p>
-            <p>Although, there used to be only two types of scopes before ES6, the global scope, and the local scope. But, with ES6 local scope was broken down into function scope and block scope.</p>
+            
+            <p class="paragraph">Although, there used to be only two types of scopes before ES6, the global scope, and the local scope. But, with ES6 local scope was broken down into function scope and block scope.</p>
             <h3>Global Scope</h3>
-            <p>
+            <p class="paragraph">
                 Variables declared Globally (outside any function) have Global Scope. Global variables can be accessed from anywhere in a JavaScript program. The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.
             </p>
             <h3>Block Scope</h3>
-            <p>
+            <p class="paragraph">
                 Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. We are only allowed to refer to these variables from within the curly brackets {}.Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
             </p>
         </div>
         <div class="answer">
             <h1>3.The event loop</h1>
-            <p>The event loop is the secret behind JavaScript's asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. Let's take a look at what happens on the back-end.
+            <p class="paragraph">The event loop is the secret behind JavaScript's asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. Let's take a look at what happens on the back-end.
             </p>
-            <p>
+            <p class="paragraph">
                 The call stack is responsible for keeping track of all the operations in line to be executed. Whenever a function is finished, it is popped from the stack.
             </p>
-            <p>
+            <p class="paragraph">
                 The event queue is responsible for sending new functions to the stack for processing. It follows the queue data structure to maintain the correct sequence in which all operations should be sent for execution.
             </p>
-            <p>
+            <p class="paragraph">
                 Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
             </p>
-            <p>
+            <p class="paragraph">
                 An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it is sent to the corresponding API which waits till the specified time to send this operation back in for processing.
             </p>
-            <p>
+            <p class="paragraph">
                 Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
             </p>
-            <p>
+            <p class="paragraph">
                 The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
             </p>
         </div>
         <div class="answer">
             <h1>4. Undefined in JavaScript</h1>
-            <p>The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types.undefined is a property of the global object. That is, it is a variable in global scope. The initial value of undefined is the primitive value undefined.In all non-legacy browsers, undefined is a non-configurable, non-writable property. 
+            <p class="paragraph">The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types.undefined is a property of the global object. That is, it is a variable in global scope. The initial value of undefined is the primitive value undefined.In all non-legacy browsers, undefined is a non-configurable, non-writable property. 
             </p>
             <h3>1) Accessing an uninitialized variable</h3>
-            <p>When you declare a variable and don't initialize it to a value, the variable will have a value of undefined.</p>
+            <p class="paragraph">When you declare a variable and don't initialize it to a value, the variable will have a value of undefined.</p>
             <h3>2) Accessing a non-existing property of an object</h3>
-            <p>
+            <p class="paragraph">
                 If you access a non-existing property of an object, you'll get undefined.
             </p>
             <h3>3) Function parameters</h3>
-            <p>
+            <p class="paragraph">
                 When you call a function with a number of parameters, you often pass the same number of arguments. But when you call the function and don't pass all the arguments, the parameters inside the function becomes undefined.
             </p>
             <h3>4) Functions return a value</h3>
-            <p>A function that doesn't have a return statement implicitly returns undefined. Likewise, when a function has a return statement without an expression, it also returns undefined. </p>
+            <p class="paragraph">A function that doesn't have a return statement implicitly returns undefined. Likewise, when a function has a return statement without an expression, it also returns undefined. </p>
             <h3>5) Accessing out-of-bounds array elements</h3>
-            <p>When you access an array element that is out-of-bounds, you’ll get the undefined value.</p>
+            <p class="paragraph">When you access an array element that is out-of-bounds, you’ll get the undefined value.</p>
             <h3>5) Strict equality and undefined</h3>
-            <p>You can use undefined and the strict equality and inequality operators to determine whether a variable has a value. In the following code, the variable x is not initialized, and the if statement evaluates to true.</p>
+            <p class="paragraph">You can use undefined and the strict equality and inequality operators to determine whether a variable has a value. In the following code, the variable x is not initialized, and the if statement evaluates to true.</p>
          </div>
       </section>
 </body>
