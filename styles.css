@@ -154,7 +154,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 1vw 1vw;
   color: white;
   border-radius: 15px;
   background: rgb(255, 255, 255);
@@ -165,6 +165,19 @@ button {
   );
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+}
+.card h3,p {
+ margin: 0 1vw;
+  color: white;
+  text-align: center;
+  padding:1vw 1vw;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    92.49deg,
+    rgba(255, 255, 255, 0.1) 0.18%,
+    rgba(255, 255, 255, 0.05) 99.85%
+  );
 }
 
 #modal-background {
@@ -188,5 +201,10 @@ button {
   }
   .card {
     flex-direction: column;
+  }
+  .card h3,p{
+    margin: 0;
+    padding: 0;
+    background:none;
   }
 }

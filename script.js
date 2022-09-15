@@ -16,7 +16,7 @@ function increment(){
 
   n++;
   console.log(n);
-  return n;
+  return (n-1);
   
 }
 
