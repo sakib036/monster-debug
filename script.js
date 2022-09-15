@@ -125,6 +125,7 @@ const closeModal = () => {
 const start = () => {
   // If already started, do not start again
   if (startTime) return;
+  countdownOverlay.innerHTML ="";
 
   let count = 3;
   countdownOverlay.style.display = "flex";
