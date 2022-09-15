@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+      </header>
+      <section class="question-answer">
+        <h1>Question And Answer</h1>
+        <div class="answer">
+            <h1>1.Difference between Local Storage, Session Storage</h1>
+            <p>
+                Local storage is the most recent mechanism. It allows for larger amounts of data to be stored, but the data is not deleted when the browser is closed. Local storage is useful for storing data that the user will need to access later, such as offline data.
+            </p>
+            <p>
+                Session storage is similar to cookies, but the data is only stored for the current session. This means that the data will be deleted when the user closes the browser. Session storage is useful for storing data that is sensitive, such as login credentials.
+            </p>
+            <h3>Local Storage</h3>
+            <p>
+                Most web applications these days require some type of user input, whether it be for a username, shipping address, or even just a preferences setting. This input is then usually sent off to a server somewhere to be processed and stored. However, what if your application needs to store data locally on the user’s computer? This is where Local Storage comes in.
+            </p>
+            <p>
+                Local Storage is a type of web storage that allows JavaScript to store and access data right in the browser. This is especially useful for storing data that you want to persist even if the user closes the browser, such as preferences or settings.
+            </p>
+            <p>
+                The data in Local Storage is stored in key/value pairs. The key is like the name of the data, and the value is like the actual data itself. You can think of it as a variable in JavaScript. To store data in Local Storage, you first need to create a key. Then you can store any data you want under that key.
+            </p>
+            <h3>Session Storage</h3>
+            <p>
+                Session Storage is a type of web storage that allows web applications to store data locally within the user's browser. Unlike cookies, data stored in session storage is specific to the site on which it was created and data is not shared with other sites
+            </p>
+            <p>
+                Session Storage is a new feature introduced in HTML5 that allows you to store data locally in the user's browser. Unlike cookies, data stored in session storage is specific to the site on which it was created and data is not shared with other sites.
+            </p>
+            <p>
+                Session Storage is a way of storing data on the client side of an application. It's similar to local storage, but with a few key differences 
+                <ul>
+                    <li>Session Storage data is only available to the site that created it.</li>
+                    <li>Session Storage data is not shared with other sites.</li>
+                    <li>Session Storage data is not persistent, meaning it is only available for the duration of the user's session on a site.</li>
+                    <li>Session Storage data is specific to the browser tab in which it was created.</li>
+                </ul>
+            </p>
+            <p>
+                Session Storage is a great way to improve the performance of your web applications by reducing the amount of data that needs to be transferred between the client and server. It can also be used to store data in a more secure way since the data is not stored in cookies where it can be accessed by third-party sites.
+            </p>
+
+        </div>
+      </section>
+</body>
+</html>
