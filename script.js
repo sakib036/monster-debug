@@ -11,19 +11,30 @@ let userText = "";
 let startTime;
 let questionText = "";
 //error Counter
-let n=0;
-function increment(){
-  n++;
-  return (n-1);
+
+let counter=document.getElementById('counter');
+// console.log(errorCount);
+let number = 0;
+function increment() {
+    number++;
+    console.log(number);
+    counter.innerHTML = number;
+}
+function reset() {
+  number = 0;
+ counter.innerHTML = number;
 }
 
 // Load and display question
-fetch("./texts.json")
+const loadJson=()=>{
+  fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
     question.innerHTML = questionText;
   });
+}
+
 
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
@@ -71,9 +82,7 @@ const validate = (key) => {
 
 // FINISHED TYPING
 const gameOver = () => {
-  const errorCount=increment();
-  console.log(errorCount);
-
+  let errorCount=counter.innerHTML? counter.innerHTML:0;
   document.removeEventListener("keydown", typeController);
   // the current time is the finish time
   // so total time taken is current time - start time
@@ -103,11 +112,14 @@ const gameOver = () => {
   // errorCount = 0;
   userText = "";
   display.classList.add("inactive");
+  
 };
 
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
+  loadJson();
+  reset();
 };
 
 const start = () => {
@@ -153,3 +165,4 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
+loadJson();
