@@ -97,6 +97,27 @@
                 The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
             </p>
         </div>
+        <div class="answer">
+            <h1>4. Undefined in JavaScript</h1>
+            <p>The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types.undefined is a property of the global object. That is, it is a variable in global scope. The initial value of undefined is the primitive value undefined.In all non-legacy browsers, undefined is a non-configurable, non-writable property. 
+            </p>
+            <h3>1) Accessing an uninitialized variable</h3>
+            <p>When you declare a variable and don't initialize it to a value, the variable will have a value of undefined.</p>
+            <h3>2) Accessing a non-existing property of an object</h3>
+            <p>
+                If you access a non-existing property of an object, you'll get undefined.
+            </p>
+            <h3>3) Function parameters</h3>
+            <p>
+                When you call a function with a number of parameters, you often pass the same number of arguments. But when you call the function and don't pass all the arguments, the parameters inside the function becomes undefined.
+            </p>
+            <h3>4) Functions return a value</h3>
+            <p>A function that doesn't have a return statement implicitly returns undefined. Likewise, when a function has a return statement without an expression, it also returns undefined. </p>
+            <h3>5) Accessing out-of-bounds array elements</h3>
+            <p>When you access an array element that is out-of-bounds, you’ll get the undefined value.</p>
+            <h3>5) Strict equality and undefined</h3>
+            <p>You can use undefined and the strict equality and inequality operators to determine whether a variable has a value. In the following code, the variable x is not initialized, and the if statement evaluates to true.</p>
+         </div>
       </section>
 </body>
 </html>
