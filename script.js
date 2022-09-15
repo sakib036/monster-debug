@@ -10,14 +10,11 @@ let userText = "";
 // let errorCount = 0;
 let startTime;
 let questionText = "";
+//error Counter
 let n=0;
-
 function increment(){
-
   n++;
-  console.log(n);
   return (n-1);
-  
 }
 
 // Load and display question
