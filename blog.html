@@ -53,6 +53,50 @@
             </p>
 
         </div>
+        <div class="answer">
+            <h1>2.JavaScript Global Scope and Block Scope</h1>
+            <p>In programming, the scope is defined as the accessibility of the variable. Or in more technical terms, it is the reference to the context of the code. So, how can we differentiate between the scope of the variables, and on what factors does this “scope” depend?</p>
+            <h3>Variable Scope in JavaScript</h3>
+            <p>In JavaScript, there are 3 types of variable scope, namely:
+                <ul>
+                    <li>Global Scope</li>
+                    <li>Function Scope</li>
+                    <li>Block Scope</li>
+                </ul>
+            </p>
+            <p>Although, there used to be only two types of scopes before ES6, the global scope, and the local scope. But, with ES6 local scope was broken down into function scope and block scope.</p>
+            <h3>Global Scope</h3>
+            <p>
+                Variables declared Globally (outside any function) have Global Scope. Global variables can be accessed from anywhere in a JavaScript program. The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.
+            </p>
+            <h3>Block Scope</h3>
+            <p>
+                Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. We are only allowed to refer to these variables from within the curly brackets {}.Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+            </p>
+        </div>
+        <div class="answer">
+            <h1>3.The event loop</h1>
+            <p>The event loop is the secret behind JavaScript's asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. Let's take a look at what happens on the back-end.
+            </p>
+            <p>
+                The call stack is responsible for keeping track of all the operations in line to be executed. Whenever a function is finished, it is popped from the stack.
+            </p>
+            <p>
+                The event queue is responsible for sending new functions to the stack for processing. It follows the queue data structure to maintain the correct sequence in which all operations should be sent for execution.
+            </p>
+            <p>
+                Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
+            </p>
+            <p>
+                An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it is sent to the corresponding API which waits till the specified time to send this operation back in for processing.
+            </p>
+            <p>
+                Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
+            </p>
+            <p>
+                The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
+            </p>
+        </div>
       </section>
 </body>
 </html>
